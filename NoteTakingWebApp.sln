@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteTakingWebApp.UI", "Note
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteTakingWebApp.DataAccess", "NoteTakingWebApp.DataAccess\NoteTakingWebApp.DataAccess.csproj", "{505CCDD5-8C51-472A-A04C-1CB8D00F3CBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteTakingWebApp.DTO", "NoteTakingWebApp.DTO\NoteTakingWebApp.DTO.csproj", "{510E9768-0CA9-425B-AE29-FDC148FD2F1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{505CCDD5-8C51-472A-A04C-1CB8D00F3CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{505CCDD5-8C51-472A-A04C-1CB8D00F3CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{505CCDD5-8C51-472A-A04C-1CB8D00F3CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{510E9768-0CA9-425B-AE29-FDC148FD2F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510E9768-0CA9-425B-AE29-FDC148FD2F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510E9768-0CA9-425B-AE29-FDC148FD2F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510E9768-0CA9-425B-AE29-FDC148FD2F1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
