@@ -5,6 +5,7 @@ namespace NoteTakingWebApp.Service.Services.Implementations
     public class BaseService<TRequestDto, TEntity, TResponseDto> 
         : IBaseService<TRequestDto, TEntity, TResponseDto>
     {
+
         public virtual TResponseDto Create(TRequestDto requestDto)
         {
 
