@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using NoteTakingWebApp.DataAccess.Db;
+
 namespace NoteTakingWebApp.UI
 {
     public class Program
@@ -5,9 +8,14 @@ namespace NoteTakingWebApp.UI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var connectionStringForDb = builder.Configuration.GetConnectionString("ConnectionStringForDb");
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<AppDbContext>((options) =>
+            {
+                options.UseNpgsql(connectionStringForDb);
+            });
 
             var app = builder.Build();
 
