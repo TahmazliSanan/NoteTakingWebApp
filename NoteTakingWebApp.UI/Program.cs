@@ -1,5 +1,7 @@
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using NoteTakingWebApp.DataAccess.Db;
+using NoteTakingWebApp.Service.Services.Config;
 
 namespace NoteTakingWebApp.UI
 {
@@ -9,6 +11,10 @@ namespace NoteTakingWebApp.UI
         {
             var builder = WebApplication.CreateBuilder(args);
             var connectionStringForDb = builder.Configuration.GetConnectionString("ConnectionStringForDb");
+            var mapperConfig = new MapperConfiguration((mc) =>
+            {
+                mc.AddProfile(new MapperProfile());
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -16,6 +22,7 @@ namespace NoteTakingWebApp.UI
             {
                 options.UseNpgsql(connectionStringForDb);
             });
+            builder.Services.AddSingleton(mapperConfig.CreateMapper());
 
             var app = builder.Build();
 
