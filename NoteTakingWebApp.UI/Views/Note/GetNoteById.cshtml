@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = Model.Title;
+}
+
+@model NoteDto
+
+<div class="card">
+    <div class="card-body">
+        <h5>@Model.Title</h5>
+        <hr />
+        <p>
+            @Model.Content
+        </p>
+    </div>
+</div>
