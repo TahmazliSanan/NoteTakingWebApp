@@ -11,6 +11,8 @@ namespace NoteTakingWebApp.UI
     {
         public static void Main(string[] args)
         {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
             var builder = WebApplication.CreateBuilder(args);
             var connectionStringForDb = builder.Configuration.GetConnectionString("ConnectionStringForDb");
             var mapperConfig = new MapperConfiguration((mc) =>
