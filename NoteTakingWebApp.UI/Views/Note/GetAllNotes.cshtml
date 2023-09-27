@@ -9,6 +9,8 @@
 <table class="table table-striped text-center">
     <tr>
         <th>Title</th>
+        <th>Created time</th>
+        <th>Updated time</th>
         <th>D / E / R</th>
     </tr>
     @{
@@ -18,12 +20,25 @@
                 <td>
                     @note.Title
                 </td>
+                <td>
+                    @note.CreatedTime.ToString("dd/MM/yyyy - hh:mm")
+                </td>
+                <td>
+                    @{
+                        if (note.IsUpdated)
+                        {
+                            @note.UpdatedTime.ToString("dd/MM/yyyy - hh:mm")
+                        }
+                        else
+                        {
+                            @note.UpdatedTime.ToString("---");
+                        }
+                    }
+                </td>
                 <td colspan="3">
-                    <a class="btn btn-outline-info" asp-controller="Note" 
-                        asp-action="GetNoteById" asp-route-id="@note.Id">Details</a>
+                    <a href="#" class="btn btn-outline-info">Details</a>
                     &nbsp;
-                    <a class="btn btn-outline-success" asp-controller="Note"
-                       asp-action="UpdateNote" asp-route-id="@note.Id">Edit</a>
+                    <a href="#" class="btn btn-outline-success">Edit</a>
                     &nbsp;
                     <a href="#" class="btn btn-outline-danger">Remove</a>
                 </td>

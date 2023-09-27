@@ -7,6 +7,17 @@
 <div class="card">
     <div class="card-body">
         <h5>@Model.Title</h5>
+        <h6>
+            Created at @Model.CreatedTime.ToString("dd/MM/yyyy - hh:mm")
+        </h6>
+        @{
+            if (Model.IsUpdated)
+            {
+                <br />
+                <h6>Updated at</h6>
+                @Model.UpdatedTime.ToString("dd/MM/yyyy - hh:mm")
+            }
+        }
         <hr />
         <p>
             @Model.Content
