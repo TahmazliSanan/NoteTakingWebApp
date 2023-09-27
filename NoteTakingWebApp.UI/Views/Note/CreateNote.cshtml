@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Create note";
+}
+
+@model NoteDto
+
+<h3>Create note</h3>
+
+<form method="post" asp-controller="Note" asp-action="CreateNote">
+    <div class="form-floating mb-3">
+        <button type="submit" class="btn btn-outline-primary">Add</button>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingTitle" 
+            placeholder="Title" asp-for="Title">
+        <label for="floatingTitle">Title</label>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-floating">
+        <textarea style="height: 200px" class="form-control" id="floatingContent" 
+            placeholder="Content" asp-for="Content"></textarea>
+        <label for="floatingContent">Content</label>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+</form>
