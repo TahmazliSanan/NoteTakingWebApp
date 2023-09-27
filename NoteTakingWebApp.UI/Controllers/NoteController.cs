@@ -59,7 +59,7 @@ namespace NoteTakingWebApp.UI.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateNoteDto(NoteDto noteDto)
+        public IActionResult UpdateNote(NoteDto noteDto)
         {
             try
             {
@@ -68,7 +68,10 @@ namespace NoteTakingWebApp.UI.Controllers
                     var updatedNote = _noteService.Update(noteDto);
                     return View("UpdateNote", updatedNote);
                 }
-                return View(noteDto);
+                else
+                {
+                    return View(noteDto);
+                }
             }
             catch (Exception exception)
             {
