@@ -6,9 +6,11 @@
 
 <h3>Create note</h3>
 
-<form method="post" asp-controller="Note" asp-action="CreateNote">
+<form method="post">
     <div class="form-floating mb-3">
-        <button type="submit" class="btn btn-outline-primary">Add</button>
+        <input type="submit" class="btn btn-outline-primary" value="Add" 
+            asp-controller="Note" asp-action="CreateNote" />
+        <a asp-controller="Home" asp-action="Home" class="btn btn-outline-dark">Back</a>
     </div>
     <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingTitle" 
