@@ -68,10 +68,7 @@ namespace NoteTakingWebApp.UI.Controllers
                     var updatedNote = _noteService.Update(noteDto);
                     return View("UpdateNote", updatedNote);
                 }
-                else
-                {
-                    return View(noteDto);
-                }
+                return View(noteDto);
             }
             catch (Exception exception)
             {
@@ -92,7 +89,7 @@ namespace NoteTakingWebApp.UI.Controllers
             try
             {
                 _noteService.Delete(id);
-                return RedirectToAction("GetAllNotes");
+                return RedirectToAction("GetAllNotes", "Note");
             }
             catch (Exception exception)
             {
