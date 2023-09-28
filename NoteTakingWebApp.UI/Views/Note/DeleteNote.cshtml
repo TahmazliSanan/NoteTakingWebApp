@@ -9,9 +9,10 @@
 
 <form method="post">
     <div class="form-floating mb-3">
-        <input type="submit" class="btn btn-outline-danger" 
+        <input type="submit" class="btn btn-danger" 
             asp-controller="Note" asp-action="DeleteNoteDto" value="Delete">
-        <a asp-controller="Home" asp-action="Home" class="btn btn-outline-dark">Back</a>
+        &nbsp;
+        <a asp-controller="Home" asp-action="Home" class="btn btn-dark">Back</a>
     </div>
     <div class="form-floating mb-3">
         <input type="hidden" asp-for="Id" value="@Model.Id">

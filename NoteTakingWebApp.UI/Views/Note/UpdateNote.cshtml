@@ -6,9 +6,12 @@
 
 <h3>Update note</h3>
 
-<form method="post" asp-controller="Note" asp-action="UpdateNote">
+<form method="post">
     <div class="form-floating mb-3">
-        <button type="submit" class="btn btn-outline-success">Save</button>
+        <input type="submit" class="btn btn-success" value="Save"
+               asp-controller="Note" asp-action="UpdateNote" />
+        &nbsp;
+        <a asp-controller="Home" asp-action="Home" class="btn btn-dark">Back</a>
     </div>
     <div class="form-floating mb-3">
         <input type="hidden" asp-for="Id" value="@Model.Id">
